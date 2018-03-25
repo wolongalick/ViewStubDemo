@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.alick.viewstubdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示空页面" />
+
+        <Button
+            android:id="@+id/btn_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示失败页面" />
+
+        <Button
+            android:id="@+id/btn_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示加载页面" />
+        <Button
+            android:id="@+id/btn_realview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示真实页面" />
+
+    </LinearLayout>
+
+
+    <ViewStub
+        android:id="@+id/vs_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vs_empty"
+        android:layout="@layout/layout_empty"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vs_empty"
+        android:layout="@layout/layout_empty"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vs_fail"
+        android:layout="@layout/layout_fail"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vs_loading"
+        android:layout="@layout/layout_loading"
+        />
+
+
+
+
+</LinearLayout>
